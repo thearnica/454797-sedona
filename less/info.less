@@ -1,0 +1,171 @@
+@import "variables.less";
+@import "mixin.less";
+
+.info {
+  &__fact {
+    position: relative;
+    padding: 0 10%;
+    line-height: 26px;
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      min-height: 37px;
+      max-height: 74px;
+      .bg-image();
+      background-image: url("../img/bg-triangle.svg");
+    }
+  }
+
+  &__advantage-list {
+    .list();
+
+    &--part-1 {
+      position: relative;
+      counter-reset: item;
+    }
+
+    &--part-2 {
+      counter-reset: item 1;
+    }
+
+    &--grey {
+      background-color: #eeeeee;
+    }
+  }
+
+  &__advantage-item {
+    position: relative;
+    .size(80%);
+    padding: 30px 10%;
+
+    &::before {
+      counter-increment: item;
+      position: absolute;
+      content: "— № " counter(item) "  —";
+      top: 70px;
+      left: 50%;
+      display: block;
+      margin-left: -30px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 6%;
+      bottom: 0;
+      display: block;
+      .size(88%, 1px);
+      background-color: #e9e9e9;
+    }
+
+    &--advantage-1 {
+      padding-top: 60px;
+      padding-bottom: 290px;
+      color: @color-white;
+      background-color: @bg-color-light-blue;
+
+      &::before {
+        top: 100px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        display: block;
+        .size(100%, 260px);
+        .bg-image();
+        background-image: url("../img/main-city-mobile@1x.jpg");
+      }
+    }
+
+    &--advantage-2 {
+      padding-bottom: 290px;
+      color: @color-white;
+      background-color: @bg-color-light-blue;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        display: block;
+        .size(100%, 260px);
+        .bg-image();
+        background-image: url("../img/main-bridge-mobile@1x.jpg");
+      }
+    }
+
+    &--advantage-5::after {
+      display: none;
+    }
+  }
+
+  &__advantage-nomination {
+    margin: 0;
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  &__advantage-description {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__service-list {
+    .list();
+    padding-bottom: 45px;
+  }
+
+  &__service-item {
+    position: relative;
+    .size(69%);
+    padding-top: 20px;
+    padding-right: 10%;
+    padding-left: 21%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 30px;
+      left: 21%;
+      display: block;
+      .size(40px, 40px);
+      margin-left: -50px;
+      .bg-image(contain);
+    }
+
+    &--hotel::before {
+      background-image: url("../img/icon-house.svg");
+    }
+
+    &--souvenir::before {
+      background-image: url("../img/icon-gift.svg");
+    }
+
+    &--food::before {
+      background-image: url("../img/icon-burger.svg");
+    }
+  }
+
+  &__service-nomination {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: @color-black;
+  }
+
+  &__service-description {
+    margin: 0;
+  }
+}

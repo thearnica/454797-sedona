@@ -1,0 +1,34 @@
+@import "variables.less";
+@import "mixin.less";
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__hash {
+    margin: 37px auto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
+  &__copyright-link:hover svg,
+  &__copyright-link:focus svg {
+    fill: #81b3d2;
+  }
+
+  &__copyright-link:active svg {
+    fill: #000000;
+    opacity: 0.3;
+  }
+}
