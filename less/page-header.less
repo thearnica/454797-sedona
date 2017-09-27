@@ -1,0 +1,51 @@
+@import "variables.less";
+@import "mixin.less";
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__logo {
+    position: relative;
+    .size(102px, 56px);
+  }
+
+  &__logo-img {
+    position: absolute;
+    z-index: 1;
+    .size(102px, 83px);
+  }
+
+  &__nav {
+    order: -1;
+  }
+
+  &__intro {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 390px;
+    background-color: @bg-color-light-blue;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    .bg-image();
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      display: block;
+      .size(100%, 57px);
+      background-image: url("../img/bg-intro-triangle-mobile.svg");
+      .bg-image();
+    }
+  }
+
+  &__intro-img {
+    .size(282px, 214px);
+  }
+}
