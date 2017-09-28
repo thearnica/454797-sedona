@@ -1,2 +1,36 @@
 @import "variables.less";
 @import "mixin.less";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: none;
+  padding: 35px 0;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    color: @color-black;
+  }
+
+  &__description {
+    margin: 30px 15%;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &--error &__button {
+    width: 56%;
+    margin: 0 22%;
+  }
+
+  &--success &__button {
+    width: 88%;
+    margin: 0 6%;
+  }
+}
