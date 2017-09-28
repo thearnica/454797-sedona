@@ -1,0 +1,34 @@
+@import "../variables.less";
+@import "../mixin.less";
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__hash {
+  margin: 37px auto;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.page-footer__copyright-link:hover path,
+.page-footer__copyright-link:focus path {
+  fill: #81b3d2;
+}
+
+.page-footer__copyright-link:active path {
+  fill: #000000;
+  opacity: 0.3;
+}

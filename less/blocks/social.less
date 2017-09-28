@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .list();
+}
+
+.social__item {
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .size(50px, 50px);
+  background-color: @bg-color-light-blue;
+
+  & path {
+    fill: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @bg-mobile-link-color-hvr;
+  }
+
+  &:active {
+    background-color: @bg-mobile-link-color-down;
+
+    & path {
+      fill: @mobile-link-color-down;
+    }
+  }
+}
+

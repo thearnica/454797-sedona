@@ -1,0 +1,58 @@
+.controller {
+  background-color: transparent;
+}
+
+.controller__scale {
+  position: relative;
+  height: 3px;
+  margin: 0 21px;
+  margin-bottom: 21px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 21px rgba(0, 0, 0, 0.6);
+}
+
+.controller__toggle {
+  position: absolute;
+  top: -4px;
+  left: 10%;
+  z-index: 1;
+  display: block;
+  .size(10px, 10px);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.controller__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding: 0 10px;
+  background-color: #f2f2f2;
+}
+
+.controller__button {
+  .size(40px, 40px);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  &--fullscreen {
+    margin-left: 10px;
+  }
+
+  & svg {
+    fill: #5c6870;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #333333;
+  }
+
+  &:active svg {
+    fill: #333333;
+    opacity: 0.3;
+  }
+}
