@@ -1,0 +1,47 @@
+@import "variables.less";
+@import "mixin.less";
+
+.photo-gallery {
+  line-height: 24px;
+
+  &__description {
+    padding: 0 5%;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    .list();
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5%;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  &__photo-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: @color-black;
+  }
+
+  &__source {
+    margin: 0;
+    margin-bottom: 5px;
+    font-style: normal;
+    text-transform: none;
+  }
+
+  &__photo {
+    order: -1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+

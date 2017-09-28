@@ -2,25 +2,20 @@
 @import "mixin.less";
 
 .info {
+  display: flex;
+  flex-direction: column;
+
   &__fact {
     position: relative;
+    margin: 0;
     padding: 0 10%;
     line-height: 26px;
     text-align: center;
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      min-height: 37px;
-      max-height: 74px;
-      .bg-image();
-      background-image: url("../img/bg-triangle.svg");
-    }
+  & svg {
+    .size(100%, auto);
+    background-color: @bg-color-light-blue;
   }
 
   &__advantage-list {
@@ -66,20 +61,12 @@
     }
 
     &--advantage-1 {
-      padding-top: 60px;
       padding-bottom: 290px;
       color: @color-white;
       background-color: @bg-color-light-blue;
 
-      &::before {
-        top: 100px;
-      }
-
       &::after {
-        position: absolute;
-        content: "";
         left: 0;
-        display: block;
         .size(100%, 260px);
         .bg-image();
         background-image: url("../img/main-city-mobile@1x.jpg");
@@ -92,10 +79,7 @@
       background-color: @bg-color-light-blue;
 
       &::after {
-        position: absolute;
-        content: "";
         left: 0;
-        display: block;
         .size(100%, 260px);
         .bg-image();
         background-image: url("../img/main-bridge-mobile@1x.jpg");

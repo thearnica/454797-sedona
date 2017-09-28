@@ -1,0 +1,31 @@
+@import "variables.less";
+@import "mixin.less";
+
+.like {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .size(24px, 24px);
+    margin-right: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    & svg {
+      .size(100%, auto);
+      opacity: 0.3;
+    }
+  }
+
+  &__result {
+    font-weight: 700;
+    color: @color-black;
+  }
+}
