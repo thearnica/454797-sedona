@@ -41,7 +41,7 @@
       достопримечательностях</p>
     <form class="page-main__form-feedback  form-feedback" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="form-feedback__unit  form-feedback__unit--fullname">
-        <legend class="form-feedback__title">Представьтесь:</legend>
+        <legend class="form-feedback__title  form-feedback__title--fullname">Представьтесь:</legend>
         <label class="form-feedback__caption  form-feedback__caption--fullname">
           Имя:
           <input class="form-feedback__field  form-feedback__field--fullname" name="given-name" type="text" placeholder="Петр" required>
@@ -56,7 +56,7 @@
         </label>
       </fieldset>
       <fieldset class="form-feedback__unit  form-feedback__unit--contacts">
-        <legend class="form-feedback__title">Контактная информация:</legend>
+        <legend class="form-feedback__title  form-feedback__title--contacts">Контактная информация:</legend>
         <label class="form-feedback__caption  form-feedback__caption--contacts">
           Контактный телефон:
           <input class="form-feedback__field  form-feedback__field--contacts" name="phone" type="tel" placeholder="Введите телефон" required>
@@ -67,21 +67,21 @@
         </label>
       </fieldset>
       <fieldset class="form-feedback__unit  form-feedback__unit--impress">
-        <legend class="form-feedback__title">Ваше Общее впечатление:</legend>
-        <ul class="form-feedback__list">
-          <li class="form-feedback__item">
+        <legend class="form-feedback__title  form-feedback__title--impress">Ваше Общее впечатление:</legend>
+        <ul class="form-feedback__list  form-feedback__list--impress">
+          <li class="form-feedback__item  form-feedback__item--impress">
             <input id="high" class="form-feedback__field  form-feedback__field--impress  visually-hidden" name="impress" type="radio" checked/>
             <label for="high" class="form-feedback__caption  form-feedback__caption--impress">
               Скорее положительное
             </label>
           </li>
-          <li class="form-feedback__item">
+          <li class="form-feedback__item  form-feedback__item--impress">
             <input id="middle" class="form-feedback__field  form-feedback__field--impress  visually-hidden" name="impress" type="radio">
             <label for="middle" class="form-feedback__caption  form-feedback__caption--impress">
               Скорее отрицательное
             </label>
           </li>
-          <li class="form-feedback__item">
+          <li class="form-feedback__item  form-feedback__item--impress">
             <input id="low" class="form-feedback__field  form-feedback__field--impress  visually-hidden" name="impress" type="radio">
             <label for="low" class="form-feedback__caption  form-feedback__caption--impress">
               Затрудняюсь ответить
@@ -90,27 +90,27 @@
         </ul>
       </fieldset>
       <fieldset class="form-feedback__unit  form-feedback__unit--attraction">
-        <legend class="form-feedback__title">Посещенные достопримечательности:</legend>
-        <ul class="form-feedback__list">
-        <li class="form-feedback__item">
+        <legend class="form-feedback__title  form-feedback__title--attraction">Посещенные достопримечательности:</legend>
+        <ul class="form-feedback__list  form-feedback__list--attraction">
+        <li class="form-feedback__item  form-feedback__item--attraction">
           <input id="bridge" class="form-feedback__field  form-feedback__field--attraction  visually-hidden" name="bridge" type="checkbox" checked>
           <label for="bridge" class="form-feedback__caption  form-feedback__caption--attraction">
             Мост Дьявола
           </label>
         </li>
-        <li class="form-feedback__item">
+        <li class="form-feedback__item  form-feedback__item--attraction">
           <input id="park" class="form-feedback__field  form-feedback__field--attraction  visually-hidden" name="park" type="checkbox" checked>
           <label for="park" class="form-feedback__caption  form-feedback__caption--attraction">
             Слайд-парк
           </label>
         </li>
-        <li class="form-feedback__item">
+        <li class="form-feedback__item  form-feedback__item--attraction">
           <input id="mountain" class="form-feedback__field  form-feedback__field--attraction  visually-hidden" name="mountain" type="checkbox">
           <label for="mountain" class="form-feedback__caption  form-feedback__caption--attraction">
             Гора-Колокол
           </label>
         </li>
-        <li class="form-feedback__item">
+        <li class="form-feedback__item  form-feedback__item--attraction">
           <input id="cliffs" class="form-feedback__field  form-feedback__field--attraction  visually-hidden" name="cliffs" type="checkbox" checked>
           <label for="cliffs" class="form-feedback__caption  form-feedback__caption--attraction">
             Красные скалы
@@ -119,7 +119,7 @@
       </ul>
       </fieldset>
       <fieldset class="form-feedback__unit  form-feedback__unit--full-impress">
-        <legend class="form-feedback__title">Опишите свои эмоции:</legend>
+        <legend class="form-feedback__title  form-feedback__title--full-impress">Опишите свои эмоции:</legend>
         <textarea class="form-feedback__field  form-feedback__field--full-impress" name="feedback"
                   placeholder="Опишите подробно все свои восторги" required></textarea>
       </fieldset>
