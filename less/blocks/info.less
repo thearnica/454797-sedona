@@ -5,22 +5,34 @@
   & svg {
     .size(100%, auto);
     background-color: @bg-color-light-blue;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
 .info__fact {
-  position: relative;
   margin: 0;
   padding: 0 10%;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+  }
 }
 
 .info__advantage-list {
   .list();
 
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   &--part-1 {
-    position: relative;
     counter-reset: item;
   }
 
@@ -35,8 +47,15 @@
 
 .info__advantage-item {
   position: relative;
-  .size(80%);
+  width: 80%;
+  min-height: 160px;
   padding: 30px 10%;
+
+  @media (min-width: 768px) {
+    width: 33.3%;
+    min-height: 166px;
+    padding: 45px 0;
+  }
 
   &::before {
     counter-increment: item;
@@ -46,6 +65,10 @@
     left: 50%;
     display: block;
     margin-left: -30px;
+
+    @media (min-width: 768px) {
+      top: 105px;
+    }
   }
 
   &::after {
@@ -56,6 +79,10 @@
     display: block;
     .size(88%, 1px);
     background-color: #e9e9e9;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   &--advantage-1 {
@@ -63,11 +90,31 @@
     color: @color-white;
     background-color: @bg-color-light-blue;
 
+    @media (min-width: 768px) {
+      width: 33%;
+      padding-right: 67%;
+      padding-bottom: 45px;
+    }
+
+    &::before {
+      @media (min-width: 768px) {
+        left: 16%;
+      }
+    }
+
     &::after {
       left: 0;
-      .size(100%, 260px);
+      .size(100%, 256px);
       .bg-image();
       background-image: url("../../img/main-city-mobile@1x.jpg");
+
+      @media (min-width: 768px) {
+        left: auto;
+        right: 0;
+        display: block;
+        .size(67%, 256px);
+        background-image: url("../../img/main-city-mobile@1x.jpg");//переопределить изображение
+      }
     }
   }
 
@@ -76,11 +123,37 @@
     color: @color-white;
     background-color: @bg-color-light-blue;
 
+    @media (min-width: 768px) {
+      width: 33%;
+      padding-left: 67%;
+      padding-bottom: 45px;
+    }
+
+    @media (min-width: 1200px) {
+      & .info__advantage-description {
+        margin-left: 22%;
+        margin-right: 22%;
+      }
+    }
+
+    &::before {
+      @media (min-width: 768px) {
+        left: 83%;
+      }
+    }
+
     &::after {
       left: 0;
       .size(100%, 260px);
       .bg-image();
       background-image: url("../../img/main-bridge-mobile@1x.jpg");
+
+      @media (min-width: 768px) {
+        left: 0;
+        display: block;
+        .size(67%, 256px);
+        background-image: url("../../img/main-bridge-mobile@1x.jpg");//переопределить изображение
+      }
     }
   }
 
@@ -96,16 +169,38 @@
   font-weight: 700;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+  }
 }
 
 .info__advantage-description {
   margin: 0;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-left: 17%;
+    margin-right: 17%;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 14%;
+    margin-right: 14%;
+  }
 }
 
 .info__service-list {
   .list();
   padding-bottom: 45px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .info__service-item {
@@ -114,6 +209,32 @@
   padding-top: 20px;
   padding-right: 10%;
   padding-left: 21%;
+
+  @media (min-width: 768px) {
+    width: 33.3%;
+    padding: 0;
+    padding-top: 140px;
+    padding-bottom: 20px;
+  }
+
+  &--souvenir {
+    @media (min-width: 768px) {
+      order: 2;
+    }
+
+    @media (min-width: 1200px) {
+      & .info__service-description {
+        margin-left: 17%;
+        margin-right: 17%;
+      }
+    }
+  }
+
+  &--food {
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
 
   &::before {
     position: absolute;
@@ -124,6 +245,13 @@
     .size(40px, 40px);
     margin-left: -50px;
     .bg-image(contain);
+
+    @media (min-width: 768px) {
+      top: 60px;
+      left: 50%;
+      .size(76px, 76px);
+      margin-left: -38px;
+    }
   }
 
   &--hotel::before {
@@ -145,8 +273,27 @@
   font-weight: 700;
   line-height: 26px;
   color: @color-black;
+
+  @media (min-width: 768px) {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+    text-align: center;
+  }
 }
 
 .info__service-description {
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-left: 17%;
+    margin-right: 17%;
+    text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: 14%;
+    margin-right: 14%;
+  }
 }

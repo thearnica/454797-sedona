@@ -42,7 +42,12 @@
   .bg-image();
 
   @media (min-width: 768px) {
-    height: 530px;
+    height: 515px;
+    background-image: url("../../img/bg-back-mobile@1x.jpg");//переопределить картинку
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../../img/bg-back-mobile@1x.jpg");//переопределить картинку
   }
 
   &::after {
@@ -57,7 +62,7 @@
     .bg-image();
 
     @media (min-width: 768px) {
-      background-image: url("../../img/bg-intro-triangle-mobile.svg");
+      background-image: url("../../img/bg-intro-triangle-mobile.svg");//переопределить картинку
     }
   }
 
@@ -68,7 +73,12 @@
     background-repeat: no-repeat;
 
     @media (min-width: 768px) {
+      height: 290px;
       background-size: cover;
+    }
+
+    @media (min-width: 1200px) {
+      height: 305px;
     }
   }
 }
@@ -85,10 +95,10 @@
   .size(229px, 39px);
 
   @media (min-width: 768px) {
-    .size(282px, 214px);
+    .size(458px, 78px);
   }
 
   @media (min-width: 1200px) {
-    .size(282px, 214px);
+    .size(461px, 79px);
   }
 }

@@ -5,15 +5,32 @@
   line-height: 26px;
   text-align: center;
   color: @color-black;
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+    font-size: 30px;
+  }
 }
 
 .search__guide {
+  max-width: 460px;
+  margin: 0 auto;
   padding: 0 9%;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 0 21%;
+    line-height: 24px;
+  }
 }
 
 .search__button {
+  max-width: 460px;
   margin: 40px 9%;
+
+  @media (min-width: 768px) {
+    margin: 50px auto;
+  }
 }
 
 .search__map {

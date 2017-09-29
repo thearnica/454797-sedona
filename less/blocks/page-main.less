@@ -1,14 +1,28 @@
 .page-main__title {
-  margin: 40px 10%;
+  max-width: 460px;
+  margin: 40px auto;
+  padding: 0 10%;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 55px;
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
+
+  &--inner {
+    font-size: 30px;
+  }
 }
 
 .page-main__description {
-  margin: 0 6%;
+  max-width: 460px;
+  margin: 0 auto;
   margin-bottom: 45px;
+  padding: 0 6%;
   line-height: 24px;
   text-align: center;
 }
