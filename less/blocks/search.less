@@ -25,14 +25,29 @@
 }
 
 .search__button {
-  max-width: 460px;
-  margin: 40px 9%;
+  max-width: 430px;
+  margin: 45px 9%;
 
   @media (min-width: 768px) {
     margin: 50px auto;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 70px;
   }
 }
 
 .search__map {
   .size(100%, 475px);
+
+  @media (min-width: 1200px) {
+    .size(100%, 345px);
+  }
+
+  & iframe {
+    @media (min-width: 1200px) {
+      .size(100%, 345px);
+    }
+  }
 }
