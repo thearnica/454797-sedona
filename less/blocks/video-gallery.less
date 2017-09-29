@@ -1,0 +1,40 @@
+.video-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-gallery__start {
+  margin: 25px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.video-gallery__description {
+  margin: 0;
+  padding: 0 10%;
+  line-height: 24px;
+  text-align: center;
+}
+
+.video-gallery__video-block {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.video-gallery__video {
+  & img {
+    .size(100%, auto);
+  }
+}
+
+.video-gallery__controller {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  margin: 0 6%;
+}

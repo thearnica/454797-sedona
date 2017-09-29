@@ -1,0 +1,45 @@
+.photo-gallery {
+  line-height: 24px;
+}
+
+.photo-gallery__description {
+  padding: 0 5%;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.photo-gallery__list {
+  .list();
+}
+
+.photo-gallery__item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 6%;
+  border-top: 1px solid #e5e5e5;
+
+  &:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.photo-gallery__photo-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: @color-black;
+}
+
+.photo-gallery__source {
+  margin: 0;
+  margin-bottom: 5px;
+  font-style: normal;
+  text-transform: none;
+}
+
+.photo-gallery__photo {
+  order: -1;
+  .size(100%, auto);
+  margin-bottom: 15px;
+}

@@ -1,0 +1,30 @@
+@import "../variables.less";
+@import "../mixin.less";
+
+.button {
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: @color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: @bg-color-light-blue;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-mobile-link-color-hvr;
+  }
+
+  &:active {
+    color: @mobile-link-color-down;
+    background-color: @bg-mobile-link-color-down;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}

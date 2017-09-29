@@ -1,0 +1,33 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: none;
+  padding: 35px 0;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: @color-black;
+}
+
+.modal__description {
+  margin: 30px 15%;
+  line-height: 24px;
+  text-align: center;
+}
+
+.modal--error .modal__button {
+  width: 56%;
+  margin: 0 22%;
+}
+
+.modal--success .modal__button {
+  width: 88%;
+  margin: 0 6%;
+}
