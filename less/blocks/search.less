@@ -1,13 +1,16 @@
 .search__start {
-  margin: 27px auto;
-  font-size: 18px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   text-align: center;
-  color: @color-black;
+  color: #000000;
 
   @media (min-width: 768px) {
-    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-top: 55px;
     font-size: 30px;
   }
 }
@@ -25,12 +28,13 @@
 }
 
 .search__button {
-  max-width: 430px;
-  margin: 45px 9%;
+  margin: 40px 7%;
 
   @media (min-width: 768px) {
-    margin: 50px auto;
-    margin-bottom: 70px;
+    max-width: 430px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: 1200px) {
@@ -39,15 +43,14 @@
 }
 
 .search__map {
-  .size(100%, 475px);
+  .size(100%, 360px);
+
+  @media (min-width: 768px) {
+    .size(100%, 350px);
+  }
 
   @media (min-width: 1200px) {
     .size(100%, 345px);
   }
-
-  & iframe {
-    @media (min-width: 1200px) {
-      .size(100%, 345px);
-    }
-  }
 }
+

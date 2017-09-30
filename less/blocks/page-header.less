@@ -13,6 +13,21 @@
     left: 50%;
     margin-left: -51px;
   }
+
+  @media (min-width: 1200px) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -64px;
+      z-index: 1;
+      display: block;
+      .size(135px, 135px);
+      margin-left: -16px;
+      border-radius: 10px;
+      background-color: #81b3d2;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .page-header__logo-img {
@@ -37,7 +52,7 @@
   justify-content: center;
   align-items: center;
   .size(100%, 390px);
-  background-color: @bg-color-light-blue;
+  background-color: #81b3d2;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   .bg-image();
 

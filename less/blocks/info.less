@@ -1,25 +1,26 @@
 .info {
   display: flex;
   flex-direction: column;
+}
 
-  & svg {
-    .size(100%, auto);
-    background-color: @bg-color-light-blue;
+.info svg {
+  .size(100%, auto);
+  background-color: #81b3d2;
 
-    @media (min-width: 768px) {
-      display: none;
-    }
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
 .info__fact {
   margin: 0;
+  margin-bottom: 5px;
   padding: 0 10%;
   line-height: 26px;
   text-align: center;
 
   @media (min-width: 768px) {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }
 
@@ -47,27 +48,42 @@
 
 .info__advantage-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 80%;
-  min-height: 160px;
-  padding: 30px 10%;
+  min-height: 110px;
+  padding: 0 10%;
+  padding-top: 25px;
+  padding-bottom: 30px;
 
   @media (min-width: 768px) {
     width: 33.3%;
+    min-height: 166px;
+    padding: 45px 0;
+  }
+
+  @media (min-width: 1200px) {
     min-height: 146px;
-    padding: 100px 0;
+    padding-top: 45px;
+    padding-bottom: 65px;
   }
 
   &::before {
     counter-increment: item;
     position: absolute;
     content: "— № " counter(item) "  —";
-    top: 70px;
+    top: 60px;
     left: 50%;
     display: block;
     margin-left: -30px;
 
     @media (min-width: 768px) {
-      top: 115px;
+      top: 110px;
+    }
+
+    @media (min-width: 1200px) {
+      top: 105px;
     }
   }
 
@@ -85,15 +101,52 @@
     }
   }
 
-  &--advantage-1 {
-    padding-bottom: 290px;
-    color: @color-white;
-    background-color: @bg-color-light-blue;
+  &--first-item {
+    min-height: 115px;
+    padding-top: 40px;
+    padding-bottom: 300px;
+    color: #ffffff;
+    background-color: #81b3d2;
 
     @media (min-width: 768px) {
-      width: 33%;
-      padding-right: 67%;
+      min-height: 166px;
+      padding-top: 45px;
       padding-bottom: 45px;
+    }
+
+    @media (min-width: 1200px) {
+      min-height: 146px;
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+
+    &::before {
+      top: 75px;
+
+      @media (min-width: 768px) {
+        top: 105px;
+      }
+
+      @media (min-width: 1200px) {
+        top: 115px;
+      }
+    }
+
+    &::after {
+      left: 0;
+      .size(100%, 260px);
+      .bg-image();
+
+      @media (min-width: 768px) {
+        display: block;
+        .size(67%, 256px);
+      }
+    }
+  }
+
+  &--advantage-1 {
+    @media (min-width: 768px) {
+      padding-right: 67%;
     }
 
     &::before {
@@ -103,38 +156,19 @@
     }
 
     &::after {
-      left: 0;
-      .size(100%, 256px);
-      .bg-image();
       background-image: url("../../img/main-city-mobile@1x.jpg");
 
       @media (min-width: 768px) {
         left: auto;
         right: 0;
-        display: block;
-        .size(67%, 256px);
         background-image: url("../../img/main-city-mobile@1x.jpg");//переопределить изображение
       }
     }
   }
 
   &--advantage-2 {
-    padding-bottom: 290px;
-    color: @color-white;
-    background-color: @bg-color-light-blue;
-
     @media (min-width: 768px) {
-      width: 33%;
       padding-left: 67%;
-      padding-bottom: 45px;
-    }
-
-    @media (min-width: 1200px) {
-      & .info__advantage-description {
-        margin-left: 22%;
-        margin-right: 22%;
-        margin-bottom: 10px;
-      }
     }
 
     &::before {
@@ -144,28 +178,24 @@
     }
 
     &::after {
-      left: 0;
-      .size(100%, 260px);
-      .bg-image();
       background-image: url("../../img/main-bridge-mobile@1x.jpg");
 
       @media (min-width: 768px) {
         left: 0;
-        display: block;
-        .size(67%, 256px);
         background-image: url("../../img/main-bridge-mobile@1x.jpg");//переопределить изображение
       }
     }
   }
 
-  &--advantage-5::after {
-    display: none;
+  &--advantage-5 {
+    &::after {
+      display: none;
+    }
   }
 }
 
 .info__advantage-nomination {
   margin: 0;
-  margin-bottom: 50px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -196,34 +226,38 @@
 
 .info__service-list {
   .list();
-  padding-bottom: 45px;
+  padding: 20px 0;
 
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
+    padding: 0;
   }
+
   @media (min-width: 1200px) {
-    padding-bottom: 60px;
+    padding-bottom: 20px;
   }
 }
 
 .info__service-item {
   position: relative;
-  .size(69%);
-  padding-top: 20px;
-  padding-right: 10%;
-  padding-left: 21%;
+  .size(70%);
+  min-height: 85px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-right: 8%;
+  padding-left: 22%;
 
   @media (min-width: 768px) {
     width: 33.3%;
     padding: 0;
-    padding-top: 140px;
-    padding-bottom: 20px;
+    padding-top: 160px;
+    padding-bottom: 60px;
   }
 
   &--souvenir {
     @media (min-width: 768px) {
-      order: 2;
+      order: 1;
     }
 
     @media (min-width: 1200px) {
@@ -234,17 +268,11 @@
     }
   }
 
-  &--food {
-    @media (min-width: 768px) {
-      order: 1;
-    }
-  }
-
   &::before {
     position: absolute;
     content: "";
-    top: 30px;
-    left: 21%;
+    top: 0;
+    left: 22%;
     display: block;
     .size(40px, 40px);
     margin-left: -50px;
@@ -272,14 +300,16 @@
 }
 
 .info__service-nomination {
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  color: @color-black;
+  color: #000000;
 
   @media (min-width: 768px) {
     max-width: 160px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     font-size: 21px;
