@@ -36,8 +36,16 @@
 .page-main__description {
   max-width: 460px;
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   padding: 0 6%;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 55px;
+  }
 }
