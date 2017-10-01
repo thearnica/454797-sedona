@@ -2,3 +2,15 @@
   background-image: url("../../img/bg-map-mobile@1x.jpg");
   .bg-image();
 }
+
+.map iframe {
+  .size(100%, 360px);
+
+  @media (min-width: 768px) {
+    .size(100%, 350px);
+  }
+
+  @media (min-width: 1200px) {
+    .size(100%, 345px);
+  }
+}

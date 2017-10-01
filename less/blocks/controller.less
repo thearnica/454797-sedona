@@ -5,16 +5,25 @@
 .controller__scale {
   position: relative;
   height: 3px;
-  margin: 0 21px;
+  margin: 0;
+  margin-left: 21px;
+  margin-right: 21px;
   margin-bottom: 21px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 0 21px rgba(0, 0, 0, 0.6);
+
+  @media (min-width: 768px) {
+    margin-left: 95px;
+    margin-right: 165px;
+    margin-bottom: 0;
+    box-shadow: 0 0 0 45px rgba(0, 0, 0, 0.6);
+  }
 }
 
 .controller__toggle {
   position: absolute;
   top: -4px;
-  left: 10%;
+  left: 20%;
   z-index: 1;
   display: block;
   .size(10px, 10px);
@@ -28,8 +37,30 @@
   justify-content: space-between;
   align-items: center;
   height: 65px;
-  padding: 0 10px;
+  padding-right: 13px;
+  padding-left: 13px;
   background-color: #f2f2f2;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    right: 0;
+    height: 93px;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.controller__buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px;
+
+  @media (min-width: 768px) {
+    width: 120px;
+  }
 }
 
 .controller__button {
@@ -38,21 +69,35 @@
   border: none;
   background-color: transparent;
 
-  &--fullscreen {
-    margin-left: 10px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .size(60px, 93px);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
-  & svg {
-    fill: #5c6870;
+  &--replay {
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+      .size(50px, 93px);
+    }
   }
+}
 
-  &:hover svg,
-  &:focus svg {
-    fill: #333333;
-  }
+.controller__button svg {
+  fill: #5c6870;
 
-  &:active svg {
-    fill: #333333;
-    opacity: 0.3;
+  @media (min-width: 768px) {
+    fill: #ffffff;
   }
+}
+
+.controller__button:hover svg,
+.controller__button:focus svg {
+  fill: #333333;
+}
+
+.controller__button:active svg {
+  opacity: 0.3;
 }

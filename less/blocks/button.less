@@ -1,27 +1,28 @@
-@import "../variables.less";
-@import "../mixin.less";
-
 .button {
   display: block;
   padding: 15px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  color: @color-white;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   border: none;
-  background-color: @bg-color-light-blue;
+  background-color: #81b3d2;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
 
   &:hover,
   &:focus {
-    background-color: @bg-mobile-link-color-hvr;
+    background-color: #669ec0;
   }
 
   &:active {
-    color: @mobile-link-color-down;
-    background-color: @bg-mobile-link-color-down;
+    color: fade(#ffffff, 30%);
+    background-color: #5496bd;
   }
 
   &:disabled {

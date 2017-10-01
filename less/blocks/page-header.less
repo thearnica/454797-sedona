@@ -7,6 +7,27 @@
 
 .page-header__logo {
   .size(102px, 56px);
+
+  @media (min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    margin-left: -51px;
+  }
+
+  @media (min-width: 1200px) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -64px;
+      z-index: 1;
+      display: block;
+      .size(135px, 135px);
+      margin-left: -16px;
+      border-radius: 10px;
+      background-color: #81b3d2;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .page-header__logo-img {
@@ -18,6 +39,10 @@
 .page-header__nav {
   order: -1;
   width: 100%;
+
+  @media (min-width: 768px) {
+    height: 56px;
+  }
 }
 
 .page-header__intro {
@@ -27,9 +52,18 @@
   justify-content: center;
   align-items: center;
   .size(100%, 390px);
-  background-color: @bg-color-light-blue;
+  background-color: #81b3d2;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   .bg-image();
+
+  @media (min-width: 768px) {
+    height: 515px;
+    background-image: url("../../img/bg-back-mobile@1x.jpg");//переопределить картинку
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../../img/bg-back-mobile@1x.jpg");//переопределить картинку
+  }
 
   &::after {
     position: absolute;
@@ -41,6 +75,10 @@
     .size(100%, 100%);
     background-image: url("../../img/bg-intro-triangle-mobile.svg");
     .bg-image();
+
+    @media (min-width: 768px) {
+      background-image: url("../../img/bg-intro-triangle-mobile.svg");//переопределить картинку
+    }
   }
 
   &--inner {
@@ -48,13 +86,34 @@
     background-position: 50% 100%;
     background-size: auto;
     background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+      height: 290px;
+      background-size: cover;
+    }
+
+    @media (min-width: 1200px) {
+      height: 305px;
+    }
   }
 }
 
 .page-header__intro-img {
   .size(282px, 214px);
+
+  @media (min-width: 768px) {
+    .size(460px, 350px);
+  }
 }
 
 .page-header__intro--inner .page-header__intro-img {
   .size(229px, 39px);
+
+  @media (min-width: 768px) {
+    .size(458px, 78px);
+  }
+
+  @media (min-width: 1200px) {
+    .size(461px, 79px);
+  }
 }
