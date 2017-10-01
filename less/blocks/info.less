@@ -119,28 +119,28 @@
       padding-top: 50px;
       padding-bottom: 60px;
     }
+  }
 
-    &::before {
-      top: 75px;
+  &--first-item::before {
+    top: 75px;
 
-      @media (min-width: 768px) {
-        top: 105px;
-      }
-
-      @media (min-width: 1200px) {
-        top: 115px;
-      }
+    @media (min-width: 768px) {
+      top: 105px;
     }
 
-    &::after {
-      left: 0;
-      .size(100%, 260px);
-      .bg-image();
+    @media (min-width: 1200px) {
+      top: 115px;
+    }
+  }
 
-      @media (min-width: 768px) {
-        display: block;
-        .size(67%, 256px);
-      }
+  &--first-item::after {
+    left: 0;
+    .size(100%, 260px);
+    .bg-image();
+
+    @media (min-width: 768px) {
+      display: block;
+      .size(67%, 256px);
     }
   }
 
@@ -148,21 +148,21 @@
     @media (min-width: 768px) {
       padding-right: 67%;
     }
+  }
 
-    &::before {
-      @media (min-width: 768px) {
-        left: 16%;
-      }
+  &--advantage-1::before {
+    @media (min-width: 768px) {
+      left: 16%;
     }
+  }
 
-    &::after {
-      background-image: url("../../img/main-city-mobile@1x.jpg");
+  &--advantage-1::after {
+    background-image: url("../../img/main-city-mobile@1x.jpg");
 
-      @media (min-width: 768px) {
-        left: auto;
-        right: 0;
-        background-image: url("../../img/main-city-mobile@1x.jpg");//переопределить изображение
-      }
+    @media (min-width: 768px) {
+      left: auto;
+      right: 0;
+      background-image: url("../../img/main-city-mobile@1x.jpg");//переопределить изображение
     }
   }
 
@@ -170,20 +170,20 @@
     @media (min-width: 768px) {
       padding-left: 67%;
     }
+  }
 
-    &::before {
-      @media (min-width: 768px) {
-        left: 83%;
-      }
+  &--advantage-2::before {
+    @media (min-width: 768px) {
+      left: 83%;
     }
+  }
 
-    &::after {
-      background-image: url("../../img/main-bridge-mobile@1x.jpg");
+  &--advantage-2::after {
+    background-image: url("../../img/main-bridge-mobile@1x.jpg");
 
-      @media (min-width: 768px) {
-        left: 0;
-        background-image: url("../../img/main-bridge-mobile@1x.jpg");//переопределить изображение
-      }
+    @media (min-width: 768px) {
+      left: 0;
+      background-image: url("../../img/main-bridge-mobile@1x.jpg");//переопределить изображение
     }
   }
 
@@ -259,12 +259,12 @@
     @media (min-width: 768px) {
       order: 1;
     }
+  }
 
+  &--souvenir .info__service-description {
     @media (min-width: 1200px) {
-      & .info__service-description {
-        margin-left: 17%;
-        margin-right: 17%;
-      }
+      margin-left: 17%;
+      margin-right: 17%;
     }
   }
 

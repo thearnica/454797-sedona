@@ -5,7 +5,9 @@
 .controller__scale {
   position: relative;
   height: 3px;
-  margin: 0 21px;
+  margin: 0;
+  margin-left: 21px;
+  margin-right: 21px;
   margin-bottom: 21px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 0 21px rgba(0, 0, 0, 0.6);
@@ -21,7 +23,7 @@
 .controller__toggle {
   position: absolute;
   top: -4px;
-  left: 10%;
+  left: 20%;
   z-index: 1;
   display: block;
   .size(10px, 10px);
@@ -35,7 +37,8 @@
   justify-content: space-between;
   align-items: center;
   height: 65px;
-  padding: 0 13px;
+  padding-right: 13px;
+  padding-left: 13px;
   background-color: #f2f2f2;
 
   @media (min-width: 768px) {
@@ -56,9 +59,7 @@
   width: 100px;
 
   @media (min-width: 768px) {
-    height: 93px;
     width: 120px;
-    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -71,49 +72,32 @@
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    .size(50px, 93px);
+    justify-content: flex-start;
+    .size(60px, 93px);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &--replay {
     @media (min-width: 768px) {
       justify-content: flex-end;
-      background-color: rgba(0, 0, 0, 0.6);
+      .size(50px, 93px);
     }
-  }
-
-  &--subtitle {
-    @media (min-width: 768px) {
-      justify-content: flex-start;
-      .size(60px, 93px);
-    }
-  }
-
-  &--fullscreen {
-    margin-left: 10px;
-
-    @media (min-width: 768px) {
-      justify-content: flex-start;
-      .size(60px, 93px);
-      margin: 0;
-    }
-  }
-
-  & svg {
-    fill: #5c6870;
-
-    @media (min-width: 768px) {
-      fill: #ffffff;
-    }
-  }
-
-  &:hover svg,
-  &:focus svg {
-    fill: #333333;
-  }
-
-  &:active svg {
-    fill: #ffffff;
-    opacity: 0.3;
   }
 }
 
+.controller__button svg {
+  fill: #5c6870;
+
+  @media (min-width: 768px) {
+    fill: #ffffff;
+  }
+}
+
+.controller__button:hover svg,
+.controller__button:focus svg {
+  fill: #333333;
+}
+
+.controller__button:active svg {
+  opacity: 0.3;
+}

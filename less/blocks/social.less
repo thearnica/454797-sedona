@@ -21,10 +21,6 @@
   .size(47px, 47px);
   background-color: #81b3d2;
 
-  & path {
-    fill: #ffffff;
-  }
-
   &:hover,
   &:focus {
     background-color: #669ec0;
@@ -32,9 +28,13 @@
 
   &:active {
     background-color: #5496bd;
-
-    & path {
-      fill: #94b9d2;
-    }
   }
+}
+
+.social__link path {
+  fill: #ffffff;
+}
+
+.social__link:active path {
+  fill: #94b9d2;
 }

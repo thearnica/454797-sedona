@@ -15,26 +15,27 @@
   padding: 0;
   border: none;
   background-color: transparent;
+}
 
-  & svg {
-    .size(100%, auto);
-    opacity: 0.3;
+.like__button svg {
+  .size(100%, auto);
+  opacity: 0.3;
 
-    @media (min-width: 1200px) {
-      opacity: 1;
-    }
+  @media (min-width: 1200px) {
+    opacity: 1;
   }
+}
 
-  & path {
-    @media (min-width: 1200px) {
-      fill: #ffffff;
-    }
+.like__button path {
+  @media (min-width: 1200px) {
+    fill: #ffffff;
   }
 }
 
 .like__result {
   font-weight: 700;
-  color: @color-black;
+  color: #000000;
+
   @media (min-width: 1200px) {
     color: #ffffff;
   }
