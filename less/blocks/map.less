@@ -1,10 +1,31 @@
 .map {
   background-image: url("../img/bg-map-mobile@1x.jpg");
   .bg-image();
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+
+  @media (min-width: 768px) {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+  }
 }
 
 .map iframe {
   .size(100%, 360px);
+  border: 0;
 
   @media (min-width: 768px) {
     .size(100%, 350px);
