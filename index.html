@@ -46,7 +46,7 @@
       <h2 class="info__title  visually-hidden">Преимущества отдыха</h2>
       <p class="info__fact">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="320px" height="37px">
-        <use xlink:href="img/sprite.svg#triangle"></use>
+        <use xlink:href="#triangle"></use>
       </svg>
       <ol class="info__advantage-list  info__advantage-list--part-1">
         <li class="info__advantage-item  info__advantage-item--first-item  info__advantage-item--advantage-1">
@@ -90,7 +90,8 @@
     <section class="page-main__search  search">
       <h2 class="search__title  visually-hidden">Поиск гостиницы</h2>
       <p class="search__start">Заинтересовались?</p>
-      <p class="search__guide">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в
+      <p class="search__guide">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие
+        предложения гостиниц в
         Седоне</p>
       <a class="search__button  button" href="#">Найти гостиницу</a>
       <section class="search__map  map">
@@ -109,7 +110,7 @@
         <a class="social__link  social__link--twitter" href="#">
           <span class="social__title  visually-hidden">Twitter</span>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="17.5px" height="14.663px">
-            <use xlink:href="img/sprite.svg#twitter"></use>
+            <use xlink:href="#twitter"></use>
           </svg>
         </a>
       </li>
@@ -117,7 +118,7 @@
         <a class="social__link  social__link--facebook" href="#">
           <span class="social__title  visually-hidden">Facebook</span>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="8.672px" height="18.944px">
-            <use xlink:href="img/sprite.svg#facebook"></use>
+            <use xlink:href="#facebook"></use>
           </svg>
         </a>
       </li>
@@ -125,7 +126,7 @@
         <a class="social__link  social__link--youtube" href="#">
           <span class="social__title  visually-hidden">YouTube</span>
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="19.979px" height="14.015px">
-            <use xlink:href="img/sprite.svg#youtube"></use>
+            <use xlink:href="#youtube"></use>
           </svg>
         </a>
       </li>
@@ -135,29 +136,12 @@
       <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="page-footer__copyright-title  visually-hidden">HTML Academy</span>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26.943px" height="34.09px">
-          <use xlink:href="img/sprite.svg#html-logo"></use>
+          <use xlink:href="#html-logo"></use>
         </svg>
       </a>
     </p>
   </footer>
 </div>
-<script>
-  var toggle = document.querySelector(".main-nav__toggle");
-  var menu = document.querySelector(".main-nav");
-
-  menu.classList.remove("main-nav--nojs");
-
-  toggle.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    if (menu.classList.contains("main-nav--closed")) {
-      menu.classList.remove("main-nav--closed");
-      menu.classList.add("main-nav--opened");
-    }
-    else {
-      menu.classList.remove("main-nav--opened");
-      menu.classList.add("main-nav--closed");
-    }
-  });
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
