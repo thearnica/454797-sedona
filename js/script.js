@@ -22,26 +22,28 @@ var buttons = [].concat.apply([], document.querySelectorAll(".modal__button"));
 
 var inputs = [].concat.apply([], document.querySelectorAll(".form-feedback [required]"));
 
-submit.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  inputs.forEach( function(input){
-    input.classList.remove("form-feedback__field--invalid");
-  });
+if(submit) {
+  submit.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    inputs.forEach(function (input) {
+      input.classList.remove("form-feedback__field--invalid");
+    });
 
-  var invalidFields = inputs.filter(function(input){
-    return !input.value;
-  });
+    var invalidFields = inputs.filter(function (input) {
+      return !input.value;
+    });
 
-  invalidFields.forEach( function(input){
-    input.classList.add("form-feedback__field--invalid");
-  });
+    invalidFields.forEach(function (input) {
+      input.classList.add("form-feedback__field--invalid");
+    });
 
-  if(invalidFields.length){
-    modalfalse.classList.add("modal--hidden");
-  } else {
-    modaltrue.classList.add("modal--hidden");
-  }
-});
+    if (invalidFields.length) {
+      modalfalse.classList.add("modal--hidden");
+    } else {
+      modaltrue.classList.add("modal--hidden");
+    }
+  });
+}
 
 buttons.forEach(function (button, index) {
   button.addEventListener("click", function (evt) {
