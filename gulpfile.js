@@ -26,6 +26,7 @@ gulp.task("style", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
@@ -34,6 +35,7 @@ gulp.task("style", function () {
 gulp.task("js", function () {
   return gulp
     .src("js/**/*.js")
+    .pipe(gulp.dest("build/js"))
     .pipe(uglify())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));
