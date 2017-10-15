@@ -1,25 +1,54 @@
 .modal {
   position: fixed;
   top: 50%;
-  left: 0;
+  left: 50%;
   display: none;
-  padding: 35px 0;
+  width: 100%;
+  margin-left: ~"calc(-100%/2)";
+  padding-bottom: 35px;
   background-color: #ffffff;
-  transform: translateY(-50%);
+  box-shadow: 5px 7px 15px 0 fade(#000000, 10%), -5px 7px 15px 0 fade(#000000, 10%);
+
+  &--hidden {
+    display: block;
+  }
+
+  &--error {
+    @media (min-width: 768px) {
+      width: 400px;
+      margin-left: -200px;
+    }
+  }
+
+  &--success {
+    background-color: #f2f2f2;
+
+    @media (min-width: 768px) {
+      max-width: 650px;
+      margin-left: -325px;
+    }
+  }
 }
 
 .modal__title {
+  margin: 0;
+  padding-top: 65px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-align: center;
   color: #000000;
+  background-color: #ffffff;
 }
 
 .modal__description {
-  margin: 30px 15%;
+  margin: 0;
+  padding: 0 11%;
+  padding-top: 35px;
+  padding-bottom: 45px;
   line-height: 24px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .modal--error .modal__button {
@@ -30,4 +59,5 @@
 .modal--success .modal__button {
   width: 88%;
   margin: 0 6%;
+  margin-top: 45px;
 }
