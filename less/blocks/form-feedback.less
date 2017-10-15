@@ -200,7 +200,6 @@
   &--contacts {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
     height: 90px;
     margin-top: 0;
@@ -222,6 +221,10 @@
       margin-bottom: 25px;
       padding-left: 0;
     }
+  }
+
+  &--contacts sup {
+    line-height: 0;
   }
 
   &--contacts:first-child {
@@ -370,23 +373,32 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 26px;
-  border: none;
+  border: 0;
   background-color: #f2f2f2;
   outline: none;
 
   &--fullname {
-    .size(100%, 100%);
+    .size(100%, 26px);
     margin-left: 20px;
+    padding: 16px 0;
     padding-left: 20px;
   }
 
   &--contacts {
-    .size(100%, 60px);
+    flex-shrink: 0;
+    .size(100%, 26px);
     margin-left: -20px;
+    margin-top: 4px;
+    padding: 17px 0;
     padding-left: 20px;
 
+    @media (min-width: 768px) {
+      .size(100%, 26px);
+      margin-top: 14px;
+    }
+
     @media (min-width: 1200px) {
-      .size(100%, 100%);
+      margin-top: 0;
       margin-left: 20px;
     }
   }
@@ -453,6 +465,7 @@
     font: inherit;
     line-height: 26px;
     color: #000000;
+    opacity: 1;
   }
 }
 
