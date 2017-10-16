@@ -14,21 +14,33 @@
 
   @media (min-width: 768px) {
     margin-left: 95px;
-    margin-right: 165px;
+    margin-right: 169px;
     margin-bottom: 0;
     box-shadow: 0 0 0 45px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: 173px;
   }
 }
 
 .controller__toggle {
   position: absolute;
   top: -4px;
-  left: 20%;
+  left: 15%;
   z-index: 1;
   display: block;
   .size(10px, 10px);
   border-radius: 50%;
   background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    left: 28%;
+  }
+
+  @media (min-width: 1200px) {
+    left: 20%;
+  }
 }
 
 .controller__buttons {
@@ -59,7 +71,11 @@
   width: 100px;
 
   @media (min-width: 768px) {
-    width: 120px;
+    width: 124px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 128px;
   }
 }
 
@@ -73,8 +89,12 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    .size(60px, 93px);
+    .size(62px, 93px);
     background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media (min-width: 768px) {
+    width: 64px;
   }
 
   &--replay {

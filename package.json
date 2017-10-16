@@ -33,7 +33,8 @@
   },
   "browwwwwserslist": [
     "last 5 versions",
-    "IE 11"
+    "IE 11",
+    "Firefox ESR"
   ],
   "editorconfig-cli": [
     "*.html",

@@ -5,7 +5,7 @@
 .photo-gallery__description {
   max-width: 430px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0 6%;
   text-align: center;
 
@@ -132,20 +132,24 @@
 
 .photo-gallery__like {
   width: 90px;
+
+  @media (min-width: 768px) {
+    width: 85px;
+  }
 }
 
 .photo-gallery__photo-wrapper {
   display: block;
 
   @media (min-width: 768px) {
-    height: 265px;
+    height: 267px;
     overflow: hidden;
   }
 }
 
 .photo-gallery__photo {
   .size(100%, auto);
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
