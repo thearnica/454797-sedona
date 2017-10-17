@@ -35,9 +35,11 @@ gulp.task("style", function () {
 gulp.task("js", function () {
   return gulp
     .src("js/**/*.js")
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build/js/"))
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    .pipe(rename(function (path) {
+      path.basename +=".min";
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
