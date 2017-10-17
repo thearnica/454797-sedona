@@ -60,12 +60,12 @@ buttons.forEach(function (button, index) {
   });
 });
 
-if(navigator.userAgent.indexOf("MSIE")!==-1
-  || navigator.appVersion.indexOf("Trident/") > 0){
-  /* Microsoft Internet Explorer detected in. */
-  var my_awesome_script = document.createElement("script");
-
-  my_awesome_script.setAttribute("src","js/picturefill.min.js");
-
-  document.head.appendChild(my_awesome_script);
-}
+// if(navigator.userAgent.indexOf("MSIE")!==-1
+//   || navigator.appVersion.indexOf("Trident/") > 0){
+//   /* Microsoft Internet Explorer detected in. */
+//   var my_awesome_script = document.createElement("script");
+//
+//   my_awesome_script.setAttribute("src","js/picturefill.min.js");
+//
+//   document.head.appendChild(my_awesome_script);
+// }
