@@ -1,8 +1,6 @@
 .form-feedback {
   margin-top: -4px;
   margin-bottom: 35px;
-  padding-left: 6%;
-  padding-right: 6%;
 
   @media (min-width: 768px) {
     display: flex;
@@ -27,16 +25,20 @@
   position: relative;
   margin: 0;
   padding: 0;
+  padding-left: 6%;
+  padding-right: 6%;
   border: none;
 
   @media (min-width: 768px) {
     width: 100%;
+    padding: 0;
   }
 
   &::before {
     position: absolute;
     content: "";
     top: -20px;
+    left: 0;
     display: block;
     .size(100%, 1px);
     background-color: #e5e5e5;
@@ -575,7 +577,8 @@
 }
 
 .form-feedback__button {
-  width: 100%;
+  width: 88%;
+  margin: 0 6%;
 
   @media (min-width: 768px) {
     width: 50%;
