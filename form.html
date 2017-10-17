@@ -5,6 +5,8 @@
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 <body class="page">
 <div style="display:none">
@@ -66,8 +68,7 @@
         <h2 class="form-feedback__title  form-feedback__title--contacts">Контактная информация:</h2>
         <div class="form-feedback__caption-wrapper">
           <label class="form-feedback__caption  form-feedback__caption--contacts">
-            <span class="form-feedback__caption-inside  form-feedback__caption-inside--phone">Контактный телефон<sup>*</sup>:</span>
-            <span class="form-feedback__caption-inside  form-feedback__caption-inside--phone-desktop">Телефон<sup>*</sup>:</span>
+            <span class="form-feedback__caption-inside"><span>Контактный </span>телефон<sup>*</sup>:</span>
             <input class="form-feedback__field  form-feedback__field--contacts" name="phone" type="tel" placeholder="Введите телефон" required>
           </label>
           <label class="form-feedback__caption  form-feedback__caption--contacts">
