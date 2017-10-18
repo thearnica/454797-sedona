@@ -10,6 +10,7 @@
 
   @media (min-width: 768px) {
     position: absolute;
+    top: 0;
     left: 50%;
     margin-left: -51px;
   }
@@ -35,7 +36,7 @@
   width: 100%;
 
   @media (min-width: 768px) {
-    height: 56px;
+    min-height: 56px;
   }
 }
 
@@ -74,13 +75,14 @@
   &::after {
     position: absolute;
     content: "";
+    left: 0;
     bottom: 0;
     display: block;
     .size(100%, 40%);
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 104% auto;
+    background-size: 100% auto;
 
     @media (min-width: 768px) {
       background-image: url("../img/bg-intro-triangle-tablet.svg");
@@ -92,7 +94,7 @@
   }
 
   &--inner {
-    height: 160px;
+    height: 158px;
     background-position: 50% 100%;
     background-size: 240%;
     background-repeat: no-repeat;
@@ -113,14 +115,17 @@
 
   @media (min-width: 768px) {
     .size(460px, 350px);
+    margin-top: -10px;
   }
 }
 
 .page-header__intro--inner .page-header__intro-img {
   .size(229px, 39px);
+  margin-top: -20px;
 
   @media (min-width: 768px) {
-    .size(458px, 78px);
+    .size(458px, 80px);
+    margin-top: -25px;
   }
 
   @media (min-width: 1200px) {

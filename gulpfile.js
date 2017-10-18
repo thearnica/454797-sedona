@@ -11,6 +11,7 @@ var imgmin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require("gulp-htmlmin");
 var include = require("posthtml-include");
 var uglify = require("gulp-uglify");
 var del = require("del");
@@ -35,9 +36,11 @@ gulp.task("style", function () {
 gulp.task("js", function () {
   return gulp
     .src("js/**/*.js")
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("build/js/"))
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    .pipe(rename(function (path) {
+      path.basename +=".min";
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -57,6 +60,10 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(gulp.dest("build"))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 });
 

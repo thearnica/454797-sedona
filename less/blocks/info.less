@@ -4,7 +4,8 @@
 }
 
 .info svg {
-  .size(100%, auto);
+  .size(100%, 100%);
+  max-height: ~"calc(100vw * 0.1157)";
   background-color: #81b3d2;
 
   @media (min-width: 768px) {
@@ -13,6 +14,7 @@
 }
 
 .info__fact {
+  width: 80%;
   margin: 0;
   margin-bottom: 5px;
   padding: 0 10%;
@@ -21,6 +23,10 @@
 
   @media (min-width: 768px) {
     margin-bottom: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: -4px;
   }
 }
 
@@ -55,12 +61,12 @@
   min-height: 110px;
   padding: 0 10%;
   padding-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 
   @media (min-width: 768px) {
     width: 33.3%;
-    min-height: 166px;
-    padding: 45px 0;
+    min-height: 170px;
+    padding: 43px 0;
   }
 
   @media (min-width: 1200px) {
@@ -81,10 +87,6 @@
     @media (min-width: 768px) {
       top: 110px;
     }
-
-    @media (min-width: 1200px) {
-      top: 105px;
-    }
   }
 
   &::after {
@@ -102,22 +104,25 @@
   }
 
   &--first-item {
+    width: 84%;
     min-height: 115px;
+    padding: 0 8%;
     padding-top: 40px;
-    padding-bottom: 300px;
+    padding-bottom: 299px;
     color: #ffffff;
     background-color: #81b3d2;
 
     @media (min-width: 768px) {
       min-height: 166px;
+      padding: 0;
       padding-top: 45px;
       padding-bottom: 45px;
     }
 
     @media (min-width: 1200px) {
-      min-height: 146px;
+      min-height: 148px;
       padding-top: 50px;
-      padding-bottom: 60px;
+      padding-bottom: 58px;
     }
   }
 
@@ -125,11 +130,11 @@
     top: 75px;
 
     @media (min-width: 768px) {
-      top: 105px;
+      top: 108px;
     }
 
     @media (min-width: 1200px) {
-      top: 115px;
+      top: 117px;
     }
   }
 
@@ -153,7 +158,7 @@
 
   &--advantage-1::before {
     @media (min-width: 768px) {
-      left: 16%;
+      left: 16.5%;
     }
   }
 
@@ -191,7 +196,7 @@
 
   &--advantage-2::before {
     @media (min-width: 768px) {
-      left: 83%;
+      left: 83.5%;
     }
   }
 
@@ -228,9 +233,17 @@
   }
 }
 
+.info__advantage-item--advantage-2 .info__advantage-description {
+  @media (min-width: 1200px) {
+    max-width: 255px;
+    margin: 0 auto;
+  }
+}
+
 .info__advantage-nomination {
+  width: 100%;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -238,6 +251,7 @@
 
   @media (min-width: 768px) {
     max-width: 160px;
+    margin-top: 4px;
     margin-left: auto;
     margin-right: auto;
     font-size: 21px;
@@ -262,6 +276,7 @@
 .info__service-list {
   .list();
   padding: 20px 0;
+  padding-top: 22px;
 
   @media (min-width: 768px) {
     display: flex;
