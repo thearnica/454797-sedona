@@ -1,5 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thearnica/454797-sedona.svg)](https://greenkeeper.io/)
+
 * Студент: [Марина Корзунова](https://up.htmlacademy.ru/adaptive/12/user/454797).
 * Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/23249).
 
